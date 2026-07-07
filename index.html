@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mark Grayson Baptism Invitation</title>
 
-<!-- Elegant Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -19,12 +18,12 @@
         --baby-blue: #bcd4e6;
         --elegant-white: #ffffff;
         --text-dark: #2c3e50;
-        --text-muted: #52606d; /* Darkened for better contrast on white backgrounds */
+        --text-muted: #52606d; 
         --card-shadow: 0 15px 35px rgba(30, 61, 89, 0.08);
         --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         --gold: #d4af37;
         --gold-light: #f3e5ab;
-        --blush-premium: linear-gradient(135deg, #bcd4e6 0%, #1e3d59 100%); /* Elegant blue theme */
+        --blush-premium: linear-gradient(135deg, #bcd4e6 0%, #1e3d59 100%); 
     }
 
     * {
@@ -48,7 +47,6 @@
         position: relative;
     }
 
-    /* ================= CELEBRATION DECORATIONS ================= */
     .bg-decorations {
         position: fixed;
         top: 0;
@@ -109,8 +107,7 @@
         0% { transform: translateY(0) rotate(-3deg); }
         100% { transform: translateY(-15px) rotate(3deg); }
     }
-
-    /* ================= ENVELOPE OPENER ================= */
+    
     .envelope-page {
         height: 100vh;
         width: 100%;
@@ -323,7 +320,6 @@
         100% { transform: scale(1.05); opacity: 1; }
     }
 
-    /* ================= MAIN WRAPPER ================= */
     .invitation {
         opacity: 0;
         display: none;
@@ -339,7 +335,6 @@
         display: block;
     }
 
-    /* HERO SECTION */
     .hero {
         text-align: center;
         padding: 20px 10px;
@@ -440,7 +435,6 @@
         100% { transform: rotate(360deg); }
     }
 
-    /* ================= NAV LINK GRID ================= */
     .nav-menu {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -481,7 +475,6 @@
         box-shadow: 0 8px 20px rgba(30, 61, 89, 0.2);
     }
 
-    /* ================= CONTENT TAB PANELS ================= */
     .tab-content {
         display: none;
         animation: fadeInTab 0.4s ease forwards;
@@ -585,29 +578,26 @@
         font-weight: 500 !important;
     }
 
-    /* LOCATION GUIDE GRID & MAP STYLING */
     .location-grid {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
-
-    /* Dynamic Uniform Card Settings for Location Guide */
     .location-grid .card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 400px; /* Forces both boxes to look identical in structural height */
+        min-height: 400px;
     }
 
     .map-container {
         width: 100%;
-        height: 240px; /* Uniform height framework for elegant frame presentation */
+        height: 240px; 
         border-radius: 12px;
         overflow: hidden;
         border: 3px solid white;
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        margin-top: auto; /* Aligns the frames precisely down along the card bottom edge */
+        margin-top: auto; 
     }
 
     .map-container iframe {
@@ -616,7 +606,6 @@
         border: 0;
     }
 
-    /* PROTOCOLS LIST */
     .protocol-list {
         list-style: none;
         display: flex;
@@ -645,7 +634,6 @@
         flex-shrink: 0;
     }
 
-    /* DRESS CODE COLORS & NEW IMAGE GUIDE SECTION */
     .dress-code-preview {
         display: flex;
         gap: 10px;
@@ -660,7 +648,6 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Style Guide Images Row */
     .style-guide-row {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -682,7 +669,6 @@
         object-fit: cover;
     }
 
-    /* Brand New Gallery Block Grid */
     .gallery-title {
         font-family: 'Playfair Display', serif;
         font-size: 1.25rem;
@@ -746,7 +732,6 @@
         color: var(--primary);
     }
 
-    /* ================= FOOTER UPGRADE FOR HIGH CONTRAST READABILITY ================= */
     footer {
         text-align: center;
         padding: 12px 20px;
@@ -764,7 +749,6 @@
         box-shadow: 0 4px 12px rgba(30, 61, 89, 0.04);
     }
 
-    /* ================= FLOATING MUSIC CONTROL BUBBLE ================= */
     .music-bubble {
         position: fixed;
         bottom: 20px;
@@ -776,7 +760,7 @@
         border: 1px solid rgba(30, 61, 89, 0.2);
         border-radius: 50%;
         box-shadow: 0 8px 25px rgba(30, 61, 89, 0.15);
-        display: none; /* Becomes visible once openInvite runs */
+        display: none; 
         align-items: center;
         justify-content: center;
         cursor: pointer;
@@ -791,7 +775,6 @@
         box-shadow: 0 12px 30px rgba(30, 61, 89, 0.25);
     }
 
-    /* Dynamic pulse animations to symbolize active music playback */
     .music-bubble.playing {
         animation: musicPulse 2s infinite ease-in-out;
     }
@@ -805,7 +788,6 @@
 
 <body>
 
-<!-- FIXED BACKGROUND CELEBRATION DECORATIONS -->
 <div class="bg-decorations">
     <div class="botanical-branch botanical-tl"></div>
     <div class="botanical-branch botanical-tr"></div>
@@ -815,17 +797,13 @@
     <div class="balloon balloon-b4"></div>
 </div>
 
-<!-- BACKGROUND AUDIO ELEMENT -->
 <audio id="bgMusic" src="music.mp3" loop></audio>
 
-<!-- MUSIC BUBBLE WIDGET -->
 <div class="music-bubble playing" id="musicBubble" onclick="toggleMusic()">🎵</div>
 
-<!-- ENVELOPE PAGE -->
 <div class="envelope-page" id="envelopePage">
     <div class="envelope-wrapper" onclick="openInvite()">
         
-        <!-- MASSIVE GRAND HERO DISPLAY PHOTO -->
         <div class="envelope-photo-container">
             <div class="corner-decor corner-tl"></div>
             <div class="corner-decor corner-tr"></div>
@@ -835,14 +813,12 @@
             <img class="envelope-nephew-hero" src="mark.png" alt="Baby Mark Grayson Portrait" onerror="this.src='https://via.placeholder.com/330x410'">
         </div>
         
-        <!-- COMPRESSED ENVELOPE WITH NICE CENTERED BUTTON -->
         <div class="envelope">
             <div class="envelope-details-block">
                 <span class="envelope-heading">Please join for the baptism of our son</span>
                 <span class="envelope-sub">Mark Grayson</span>
             </div>
 
-            <!-- THE RE-DESIGNED PINK LUXURY BUTTON (COMPLETELY INSIDE CARD) -->
             <button class="luxury-open-btn">
                 <span>🕊️</span> Open Invitation
             </button>
@@ -851,10 +827,8 @@
     </div>
 </div>  
 
-<!-- INVITATION CONTENT WRAPPER -->
 <div class="invitation" id="invitation">
 
-    <!-- HERO PROFILE HEADER -->
     <div class="hero">
         <div class="img-container">
             <img src="mark.png" alt="Baby Mark Grayson" onerror="this.src='https://via.placeholder.com/130'">
@@ -864,7 +838,6 @@
         <div class="hero-date">July 12, 2026</div>
     </div>
 
-    <!-- NAVIGATION LINK ROW -->
     <div class="nav-menu">
         <div class="nav-btn active" onclick="switchTab(event, 'schedule')">Schedule</div>
         <div class="nav-btn" onclick="switchTab(event, 'location')">Location Guide</div>
@@ -874,7 +847,6 @@
         <div class="nav-btn" onclick="switchTab(event, 'godparents')">Godparent's</div>
     </div>
 
-    <!-- TAB 1: SCHEDULE -->
     <div id="schedule" class="tab-content active">
         <div class="card">
             <div class="timeline">
@@ -903,17 +875,15 @@
         </div>
     </div>
 
-    <!-- TAB 2: LOCATION GUIDE -->
     <div id="location" class="tab-content">
         <div class="location-grid">
             
-            <!-- CEREMONY CARD -->
             <div class="card">
                 <div>
                     <h3>The Ceremony Church</h3>
                     <p style="margin-bottom: 12px;">Our Lady of the Sacred Heart Parish, Marigondon, Lapu-Lapu City</p>
                 </div>
-                <!-- Static Image Container for Church -->
+                
                 <div class="map-container">
                     <img 
                         src="church.jpg" 
@@ -923,14 +893,12 @@
                 </div>
             </div>
             
-            <!-- RECEPTION CARD -->
             <div class="card">
                 <div>
                     <h3>The Reception Venue</h3>
-                    <p style="margin-bottom: 12px;">114 S. Osmena Street, Gun-ob, Lapu-Lapu City, Philippines, 6015</p>
                     <p style="margin-bottom: 12px;">Felisaz Events Place</p>
+                    <p style="margin-bottom: 12px;">114 S. Osmena Street, Gun-ob, Lapu-Lapu City, Philippines, 6015</p>
                 </div>
-                <!-- Interactive Live Google Map frame for Reception Venue -->
                 <div class="map-container">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.70014023223!2d123.9430335758785!3d10.293779667853112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9997424d9e03d%3A0xe54d6fa0a38f36c5!2sS.%20Osme%C3%B1a%20St%2C%20Lapu-Lapu%20City%2C%20Cebu!5e0!3m2!1sen!2sph!4v1718460000001!5m2!1sen!2sph" 
@@ -944,7 +912,6 @@
         </div>
     </div>
 
-    <!-- TAB 3: DRESS CODE -->
     <div id="style" class="tab-content">
         <div class="card">
             <h3>Dress Code Guide</h3>
@@ -958,7 +925,6 @@
                 <div class="color-bubble" style="background: #1e3d59;"></div>
             </div>
 
-            <!-- 4 JPG IMAGES PLACED DIRECTLY AFTER DRESS CODE MESSAGE -->
             <div class="style-guide-row">
                 <div class="style-img-box">
                     <img src="dress.jpg" alt="Style Guide 1" onerror="this.src='https://via.placeholder.com/150x150?text=White+OOTD'">
@@ -977,7 +943,6 @@
         </div>
     </div>
 
-    <!-- TAB 4: GIFT IDEAS -->
     <div id="gifts" class="tab-content">
         <div class="card">
             <h3>Gift Ideas</h3>
@@ -986,7 +951,6 @@
         </div>
     </div>
 
-    <!-- TAB 5: HEALTH PROTOCOLS -->
     <div id="safety" class="tab-content">
         <div class="card">
             <h3 style="margin-bottom: 15px;">Baby's Health Protocols</h3>
@@ -1011,7 +975,6 @@
         </div>
     </div>
 
-    <!-- TAB 6: GODPARENT'S & CONTACT -->
     <div id="godparents" class="tab-content">
         <div class="card" style="background: rgba(232, 241, 245, 0.9); margin-bottom: 20px;">
             <p class="msg-quote">
@@ -1034,19 +997,17 @@
 
 <script>
 function openInvite() {
-    // Hide envelope page
     document.getElementById('envelopePage').classList.add('fade-out');
     document.getElementById('invitation').classList.add('reveal');
     
-    // Play Background Audio softly
     const music = document.getElementById('bgMusic');
     music.volume = 0.4;
     music.play().then(() => {
-        // Display and activate music controller if playing successfully
+        
         document.getElementById('musicBubble').style.display = "flex";
     }).catch(error => {
         console.log("Audio autoplay prevented by browser configurations.");
-        // Display alternative setup anyway for intentional interaction activation
+        
         document.getElementById('musicBubble').style.display = "flex";
         document.getElementById('musicBubble').classList.remove('playing');
         document.getElementById('musicBubble').innerText = "🔇";
